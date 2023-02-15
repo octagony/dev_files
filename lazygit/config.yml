@@ -1,0 +1,26 @@
+gui:
+  winowSize: "full"
+  sidePanelWidth: 0.4
+  theme:
+    lightTheme: false
+    activeBorderColor:
+      - "#cba6fa" #Mauve
+      - bold
+    inactiveBorderColor:
+      - "#45475a" # Surface1
+    optionsTextColor:
+      - "#cdd6f4" # Text
+    selectedLineBgColor:
+      - "#45475a" # Surface1
+    selectedRangeBgColor:
+      - "#313244" # Surface0
+    cherryPickedCommitBgColor:
+      - "#94e2d5" # Teal
+    cherryPickedCommitFgColor:
+      - "#89b4fa" # Blue
+    unstagedChangesColor:
+      - "#f38ba8" # Red
+    defaultFgColor:
+      - "#bac2de" # Subtext1
+  showRandomTip: false
+  showIcons: true

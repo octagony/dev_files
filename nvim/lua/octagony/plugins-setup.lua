@@ -106,9 +106,6 @@ packer.startup(function(use)
 	--Fidget
 	use("j-hui/fidget.nvim")
 
-	--Template string replacer
-	use("axelvc/template-string.nvim")
-
 	--Noice
 	use({
 		"folke/noice.nvim",

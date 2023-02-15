@@ -1,0 +1,15 @@
+# Fish
+fish/completions/
+fish/conf.d/
+fish/functions/_nvm*
+fish/functions/nvm*
+fish/functions/fisher.fish
+fish/functions/fish_right_prompt.fish
+fish/fish_plugins
+fish/fish_variables
+
+# Lazygit
+lazygit/state.yml
+
+# NVIM
+nvim/plugin/

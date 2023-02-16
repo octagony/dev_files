@@ -13,3 +13,6 @@ lazygit/state.yml
 
 # NVIM
 nvim/plugin/
+
+# TMUX
+tmux/plugins/

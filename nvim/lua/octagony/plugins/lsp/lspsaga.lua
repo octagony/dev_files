@@ -4,21 +4,29 @@ if not saga_status then
 end
 
 saga.setup({
-	error_sign = " ",
-	warn_sign = " ",
-	hint_sign = " ",
-	infor_sign = " ",
-	diagnostic_header_icon = " ",
-	rename_action_keys = {
+	ui = {
+		border = "rounded",
+		winblend = 0,
+		kind = {},
+	},
+	symbol_in_winbar = {
+		separator = "   ",
+		respect_root = true,
+		color_mode = false,
+	},
+	rename = {
 		quit = "q",
 		exec = "<CR>",
 	},
-	finder_action_keys = {
+	finder = {
 		open = "o",
 		vsplit = "v",
 		split = "s",
 		quit = "q",
 		scroll_down = "<C-j>",
 		scroll_up = "<C-k>",
+	},
+	lightbulb = {
+		enable = false,
 	},
 })

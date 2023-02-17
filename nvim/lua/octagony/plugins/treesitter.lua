@@ -10,6 +10,7 @@ treesitter.setup({
 	indent = { enable = true },
 	autotag = { enable = true },
 	ensure_installed = {
+		"astro",
 		"json",
 		"javascript",
 		"typescript",

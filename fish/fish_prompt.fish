@@ -12,6 +12,7 @@ function fish_prompt
     if fish_is_root_user
         echo -n (set_color red)'# '
     end
+    echo -n (set_color -o "#cba6f7")'❯' 
     echo -n (set_color -o "#94e2d5")'❯ ' 
     set_color "#cdd6f4"
 end

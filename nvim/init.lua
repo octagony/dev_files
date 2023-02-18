@@ -1,3 +1,17 @@
+--
+-- ██████╗  ██████╗████████╗ █████╗
+--██╔═══██╗██╔════╝╚══██╔══╝██╔══██╗
+--██║   ██║██║        ██║   ███████║
+--██║   ██║██║        ██║   ██╔══██║
+--╚██████╔╝╚██████╗   ██║   ██║  ██║
+-- ╚═════╝  ╚═════╝   ╚═╝   ╚═╝  ╚═╝
+-- ███╗   ██╗██╗   ██╗██╗███╗   ███╗
+-- ████╗  ██║██║   ██║██║████╗ ████║
+-- ██╔██╗ ██║██║   ██║██║██╔████╔██║
+-- ██║╚██╗██║╚██╗ ██╔╝██║██║╚██╔╝██║
+-- ██║ ╚████║ ╚████╔╝ ██║██║ ╚═╝ ██║
+-- ╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝     ╚═╝
+--
 -- Core
 require("octagony.plugins-setup")
 require("octagony.core.options")
@@ -5,7 +19,8 @@ require("octagony.core.keymaps")
 require("octagony.core.colorscheme")
 
 -- General plugins
-require("octagony.plugins.nvim-tree")
+require("octagony.plugins.alpha")
+require("octagony.plugins.neo-tree")
 require("octagony.plugins.comment")
 require("octagony.plugins.lualine")
 require("octagony.plugins.bufferline")

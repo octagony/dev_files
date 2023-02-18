@@ -8,16 +8,30 @@ vim.cmd([[packadd packer.nvim]])
 packer.startup(function(use)
 	--- PLUGINS LIST START
 	--
-
 	--Packer
 	use("wbthomason/packer.nvim")
+
+	--Alpha starter screen
+	use({
+		"goolord/alpha-nvim",
+		config = function()
+			require("octagony.plugins.alpha")
+		end,
+	})
 
 	--Catppuccin theme
 	use({ "catppuccin/nvim", as = "catppuccin" })
 
-	--- NVIM Tree
-	use("nvim-tree/nvim-tree.lua")
-
+	--- Neo Tree
+	use({
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v2.x",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons",
+			"MunifTanjim/nui.nvim",
+		},
+	})
 	-- Replace "/'
 	use("tpope/vim-surround")
 

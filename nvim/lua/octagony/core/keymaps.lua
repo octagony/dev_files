@@ -38,8 +38,8 @@ keymap.set("", "<C-k>", "<C-w>k")
 keymap.set("", "<C-j>", "<C-w>j")
 keymap.set("", "<C-l>", "<C-w>l")
 
---NVIMTree toggle
-keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
+--Neotree float toggle
+keymap.set("n", "<leader>e", "<cmd>Neotree toggle float<CR>")
 
 --Telescope actions
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>")

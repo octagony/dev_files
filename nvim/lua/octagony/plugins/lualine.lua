@@ -49,7 +49,7 @@ lualine.setup({
 			},
 		},
 		lualine_x = {},
-		lualine_y = { "filetype", "progress" },
+		lualine_y = { "filetype" },
 		lualine_z = {
 			{ "location" },
 		},

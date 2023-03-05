@@ -16,7 +16,6 @@ null_ls.setup({
 		diagnostics.eslint_d.with({
 			diagnostics_format = "[eslint] #{m}\n(#{c})",
 		}),
-		diagnostics.fish,
 	},
 	on_attach = function(current_client, bufnr)
 		if current_client.supports_method("textDocument/formatting") then

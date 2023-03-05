@@ -39,7 +39,7 @@ keymap.set("", "<C-j>", "<C-w>j")
 keymap.set("", "<C-l>", "<C-w>l")
 
 --Neotree float toggle
-keymap.set("n", "<leader>e", "<cmd>Neotree toggle float<CR>")
+keymap.set("n", "<leader>e", "<cmd>Neotree toggle<CR>")
 
 --Telescope actions
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>")

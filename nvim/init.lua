@@ -34,6 +34,7 @@ require("octagony.plugins.ts-autotag")
 require("octagony.plugins.fidget")
 require("octagony.plugins.noice")
 require("octagony.plugins.notify")
+require("octagony.plugins.web-devicons")
 
 --LSP
 require("octagony.plugins.lsp.mason")

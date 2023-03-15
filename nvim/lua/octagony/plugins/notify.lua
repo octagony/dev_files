@@ -5,6 +5,6 @@ end
 
 notify.setup({
 	render = "minimal",
-	timeout = 1000,
+	timeout = 500,
 	top_down = false,
 })

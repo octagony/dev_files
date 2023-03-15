@@ -48,13 +48,21 @@ lspconfig["tailwindcss"].setup({
 })
 
 lspconfig["astro"].setup({
-	capabilities = capabilities,
 	on_attach = on_attach,
+	capabilities = capabilities,
 })
 
 lspconfig["cssls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+})
+
+lspconfig["prismals"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	filetypes = {
+		"prisma",
+	},
 })
 
 typescript.setup({

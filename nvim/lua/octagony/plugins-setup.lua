@@ -121,6 +121,9 @@ packer.startup(function(use)
 	--Markdown Preview
 	use("iamcco/markdown-preview.nvim")
 
+	--Prisma support
+	use("prisma/vim-prisma")
+
 	--Emmet
 	use("mattn/emmet-vim")
 
@@ -135,6 +138,8 @@ packer.startup(function(use)
 			"rcarriga/nvim-notify",
 		},
 	})
+
+	use("wuelnerdotexe/vim-astro")
 
 	--
 	--- PLUGINS LIST END

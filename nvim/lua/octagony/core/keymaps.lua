@@ -12,6 +12,7 @@ keymap.set("n", "<leader>sa", "gg<S-v>G")
 --Save/Quit
 keymap.set("n", "<leader>w", "<cmd>:w<CR>")
 keymap.set("n", "<leader>q", "<cmd>:q<CR>")
+keymap.set("n", "<S-q>", "<cmd>:qa<CR>")
 
 -- Increment/Decrement
 keymap.set("n", "<leader>+", "<C-a>")
@@ -29,8 +30,8 @@ keymap.set("n", "<leader>sx", ":close<CR>")
 -- Tabs
 keymap.set("n", "<leader>to", ":tabnew<CR>")
 keymap.set("n", "<leader>tx", ":tabclose<CR>")
-keymap.set("n", "<leader>tn", ":tabn<CR>")
-keymap.set("n", "<leader>tp", ":tabp<CR>")
+keymap.set("n", "<S-l>", ":tabn<CR>")
+keymap.set("n", "<S-h>", ":tabp<CR>")
 
 -- CTRL+{h,j,k,l} for navigation between windows
 keymap.set("", "<C-h>", "<C-w>h")

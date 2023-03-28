@@ -31,9 +31,6 @@ require("octagony.plugins.treesitter")
 require("octagony.plugins.gitsigns")
 require("octagony.plugins.colorizer")
 require("octagony.plugins.ts-autotag")
-require("octagony.plugins.fidget")
-require("octagony.plugins.noice")
-require("octagony.plugins.notify")
 require("octagony.plugins.web-devicons")
 
 --LSP

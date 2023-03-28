@@ -109,9 +109,6 @@ packer.startup(function(use)
 		end,
 	})
 
-	--TS Rainbow
-	use("p00f/nvim-ts-rainbow")
-
 	--Git signs
 	use("lewis6991/gitsigns.nvim")
 
@@ -121,25 +118,8 @@ packer.startup(function(use)
 	--Markdown Preview
 	use("iamcco/markdown-preview.nvim")
 
-	--Prisma support
-	use("prisma/vim-prisma")
-
 	--Emmet
 	use("mattn/emmet-vim")
-
-	--Fidget
-	use("j-hui/fidget.nvim")
-
-	--Noice
-	use({
-		"folke/noice.nvim",
-		requires = {
-			"MunifTanjim/nui.nvim",
-			"rcarriga/nvim-notify",
-		},
-	})
-
-	use("wuelnerdotexe/vim-astro")
 
 	--
 	--- PLUGINS LIST END

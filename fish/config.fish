@@ -3,7 +3,7 @@ if status is-interactive
 	zoxide init fish | source
 	
 	#ALIASES
-	alias ins="sudo pacman -S"
+	alias ins="paru -S"
 	alias del="sudo pacman -Rcsn"
 	alias c="clear; echo; fastfetch; echo"
 	alias ll="exa --long -all --icons"
@@ -26,6 +26,13 @@ if status is-interactive
 	alias tn="tmux new -s"
 	alias ta="tmux attach"
 	alias td="tmux detach"
+
+   # NAVIGATION
+   alias ..='cd ..'
+   alias ...='cd ../..'
+   alias .3='cd ../../..'
+   alias .4='cd ../../../..'
+   alias .5='cd ../../../../..'
 
 	#SETS
 	set -gx EDITOR nvim

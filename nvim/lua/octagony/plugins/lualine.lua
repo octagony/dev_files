@@ -19,7 +19,6 @@ local bubbles_theme = {
 		b = { fg = colors.white, bg = colors.grey },
 		c = { fg = colors.black, bg = colors.black },
 	},
-
 	insert = { a = { fg = colors.black, bg = colors.blue } },
 	visual = { a = { fg = colors.black, bg = colors.teal } },
 	replace = { a = { fg = colors.black, bg = colors.red } },
@@ -35,6 +34,7 @@ lualine.setup({
 	options = {
 		theme = bubbles_theme,
 		component_separators = "|",
+		disabled_filetypes = { "packer", "neo-tree" },
 	},
 	sections = {
 		lualine_a = {

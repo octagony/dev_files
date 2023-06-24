@@ -35,10 +35,11 @@ lualine.setup({
 		theme = bubbles_theme,
 		component_separators = "|",
 		disabled_filetypes = { "packer", "neo-tree" },
+		section_separators = { left = "", right = "" },
 	},
 	sections = {
 		lualine_a = {
-			{ "mode" },
+			{ "mode", separator = { left = "" }, right_padding = 2 },
 		},
 		lualine_b = { "branch", { "filename", file_status = true, path = 0 } },
 		lualine_c = {
@@ -51,7 +52,7 @@ lualine.setup({
 		lualine_x = {},
 		lualine_y = { "filetype" },
 		lualine_z = {
-			{ "location" },
+			{ "location", separator = { right = "" }, left_padding = 2 },
 		},
 	},
 	inactive_sections = {

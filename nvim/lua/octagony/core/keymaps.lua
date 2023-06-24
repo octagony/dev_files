@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
--- General
+--General
 keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "x", '"_x')
 
@@ -14,10 +14,6 @@ keymap.set("n", "<leader>w", "<cmd>:w<CR>")
 keymap.set("n", "<leader>q", "<cmd>:q<CR>")
 keymap.set("n", "<S-q>", "<cmd>:qa<CR>")
 
--- Increment/Decrement
-keymap.set("n", "<leader>+", "<C-a>")
-keymap.set("n", "<leader>-", "<C-x>")
-
 -- No highlights
 keymap.set("n", "<leader>h", ":nohl<CR>")
 
@@ -27,19 +23,19 @@ keymap.set("n", "<leader>sh", "<C-w>s")
 keymap.set("n", "<leader>se", "<C-w>=")
 keymap.set("n", "<leader>sx", ":close<CR>")
 
--- Tabs
-keymap.set("n", "<leader>to", ":tabnew<CR>")
-keymap.set("n", "<leader>tx", ":tabclose<CR>")
-keymap.set("n", "<S-l>", ":tabn<CR>")
-keymap.set("n", "<S-h>", ":tabp<CR>")
-
 -- CTRL+{h,j,k,l} for navigation between windows
 keymap.set("", "<C-h>", "<C-w>h")
 keymap.set("", "<C-k>", "<C-w>k")
 keymap.set("", "<C-j>", "<C-w>j")
 keymap.set("", "<C-l>", "<C-w>l")
 
---Neotree float toggle
+-- Tabs
+keymap.set("n", "<leader>to", ":tabnew<CR>")
+keymap.set("n", "<leader>tx", ":tabclose<CR>")
+keymap.set("n", "<S-l>", ":tabn<CR>")
+keymap.set("n", "<S-h>", ":tabp<CR>")
+
+--Neotree toggle
 keymap.set("n", "<leader>e", "<cmd>Neotree toggle<CR>")
 
 --Telescope actions

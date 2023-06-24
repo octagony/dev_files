@@ -1,4 +1,4 @@
-﻿local opt = vim.opt
+local opt = vim.opt
 
 --Encoding
 vim.scriptencoding = "utf-8"

@@ -3,8 +3,16 @@ function fish_prompt
         echo -n (set_color brred)"$USER"(set_color white)'@'(set_color yellow)(prompt_hostname)' '
     end
 
+
     printf '  '
     echo -n (set_color -o "#cba6f7")(prompt_pwd)
+
+    set_color -o "#f38ba8"
+
+    if fish_git_prompt
+       printf " "
+    end
+     
     
     printf '\n  '
     

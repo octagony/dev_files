@@ -3,15 +3,19 @@ if status is-interactive
 	zoxide init fish | source
 	
 	#ALIASES
-	alias ins="paru -S"
-	alias del="sudo pacman -Rcsn"
+	alias ins="sudo nala install"
+	alias del="sudo nala remove"
+	alias upd="sudo nala update && sudo nala upgrade"
+	alias ser="nala search"
 	alias c="clear; echo; fastfetch; echo"
 	alias ll="exa --long -all --icons"
 	alias ls="exa --icons"
-	alias cat="bat --theme=\"Catppuccin-mocha\""
+	alias cat="batcat --theme="Catpuccin-mocha""
 	alias du="sudo dust"
 	alias lg="lazygit"
 	alias tre="tre -e"
+	alias fd="fdfind"
+	alias code="codium"
 
 	#NVIM ALIASES
 	alias vi="nvim"
@@ -26,6 +30,13 @@ if status is-interactive
 	alias tn="tmux new -s"
 	alias ta="tmux attach"
 	alias td="tmux detach"
+
+	#ZELLIJ ALIASES
+	alias zl="zellij"
+	alias zn="zellij -s"
+	alias za="zellij attach"
+	alias zs="zellij list-sessions"
+	alias zk="zellij kill-all-sessions"
 
    # NAVIGATION
    alias ..='cd ..'
@@ -44,3 +55,7 @@ if status is-interactive
 	fastfetch	
 	echo ""
 end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

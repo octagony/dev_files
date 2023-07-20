@@ -34,7 +34,7 @@ if status is-interactive
 	#ZELLIJ ALIASES
 	alias zl="zellij"
 	alias zn="zellij -s"
-	alias za="zellij attach"
+	alias zt="zellij attach"
 	alias zs="zellij list-sessions"
 	alias zk="zellij kill-all-sessions"
 

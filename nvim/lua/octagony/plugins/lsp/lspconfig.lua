@@ -55,6 +55,17 @@ lspconfig["astro"].setup({
 lspconfig["cssls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+	settings = {
+		css = { validate = true, lint = {
+			unknownAtRules = "ignore",
+		} },
+		scss = { validate = true, lint = {
+			unknownAtRules = "ignore",
+		} },
+		less = { validate = true, lint = {
+			unknownAtRules = "ignore",
+		} },
+	},
 })
 
 lspconfig["prismals"].setup({
@@ -69,6 +80,13 @@ lspconfig["volar"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
+})
+
+lspconfig["svelte"].setup({
+	cmd = { "svelteserver", "--stdio" },
+	capabilities = capabilities,
+	on_attach = on_attach,
+	filetypes = { "svelte" },
 })
 
 typescript.setup({

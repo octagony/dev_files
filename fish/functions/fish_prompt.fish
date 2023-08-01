@@ -5,15 +5,10 @@ function fish_prompt
 
 
     printf '  '
-    echo -n (set_color -o "#cba6f7")(prompt_pwd)
-
-    set_color -o "#f38ba8"
-
-    if fish_git_prompt
-       printf " "
-    end
-     
-    
+    echo -n (set_color -o "#cba6f7") 
+    printf (prompt_pwd)
+    echo -n (set_color -o "#f38ba8") 
+    echo -n (git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')' ' 
     printf '\n  '
     
     set_color -o

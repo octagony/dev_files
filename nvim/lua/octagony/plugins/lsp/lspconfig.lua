@@ -6,7 +6,6 @@ lspconfig.lua_ls.setup({
 	settings = {
 		Lua = {
 			diagnostics = {
-				-- Get the language server to recognize the `vim` global
 				globals = { "vim" },
 			},
 		},
@@ -15,6 +14,8 @@ lspconfig.lua_ls.setup({
 lspconfig.pyright.setup({})
 lspconfig.tsserver.setup({})
 lspconfig.prismals.setup({})
+lspconfig.svelte.setup({})
+lspconfig.volar.setup({})
 lspconfig.cssls.setup({
 	capabilities = capabilities,
 })
@@ -77,5 +78,21 @@ typescript.setup({
 			"typescript.tsx",
 		},
 		cmd = { "typescript-language-server", "--stdio" },
+	},
+})
+
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+for type, icon in pairs(signs) do
+	local hl = "DiagnosticSign" .. type
+	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+end
+
+vim.diagnostic.config({
+	virtual_text = {
+		prefix = "● ",
+	},
+	update_in_insert = true,
+	float = {
+		source = "always",
 	},
 })

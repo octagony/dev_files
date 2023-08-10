@@ -13,6 +13,7 @@ local function default_header()
 		" ██║╚██╗██║╚██╗ ██╔╝██║██║╚██╔╝██║",
 		" ██║ ╚████║ ╚████╔╝ ██║██║ ╚═╝ ██║",
 		" ╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝     ╚═╝",
+		"",
 	}
 end
 
@@ -52,7 +53,7 @@ require("dashboard").setup({
 				action = ":Telescope live_grep",
 			},
 			{
-				icon = " ",
+				icon = " ",
 				icon_hl = "Title",
 				desc = "Config",
 				desc_hl = "String",

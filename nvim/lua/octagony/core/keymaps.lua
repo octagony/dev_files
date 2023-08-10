@@ -38,10 +38,3 @@ keymap.set("n", "<S-h>", ":tabp<CR>", opts)
 
 --Neotree toggle
 keymap.set("n", "<leader>e", "<cmd>Neotree toggle<CR>", opts)
-
---Telescope actions
-keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
-keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<CR>", opts)
-keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>", opts)
-keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
-keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)

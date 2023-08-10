@@ -1,11 +1,11 @@
 vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
-local neo_tree_status, neo_tree = pcall(require, "neo-tree")
-if not neo_tree_status then
-	return
-end
+vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
+vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
+vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
+vim.fn.sign_define("DiagnosticSignHint", { text = "󰌵", texthl = "DiagnosticSignHint" })
 
-neo_tree.setup({
+require("neo-tree").setup({
 	close_if_last_window = true,
 	popup_border_style = "rounded",
 	enable_git_status = true,
@@ -36,7 +36,7 @@ neo_tree.setup({
 	},
 	window = {
 		position = "right",
-		width = 25,
+		width = 30,
 		mappings = {
 			["o"] = "open",
 			["S"] = "open_split",
@@ -60,7 +60,6 @@ neo_tree.setup({
 				"__pycache__",
 			},
 		},
-		follow_current_file = true,
 		hijack_netrw_behavior = "open_current",
 		use_libuv_file_watcher = true,
 	},

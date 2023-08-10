@@ -1,9 +1,4 @@
-local bufferline_status, bufferline = pcall(require, "bufferline")
-if not bufferline_status then
-	return
-end
-
-bufferline.setup({
+require("bufferline").setup({
 	options = {
 		mode = "tabs",
 		separator_style = "slant",

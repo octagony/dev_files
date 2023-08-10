@@ -1,5 +1,8 @@
-local theme_status, _ = pcall(vim.cmd, "colorscheme catppuccin-mocha")
-if not theme_status then
-	print("Colorscheme not found!")
-	return
+vim.opt.termguicolors = true
+
+function Set_theme(color)
+	color = color or "catppuccin-mocha"
+	vim.cmd.colorscheme(color)
 end
+
+Set_theme()

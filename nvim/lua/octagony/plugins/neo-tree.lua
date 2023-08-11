@@ -1,5 +1,5 @@
 vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
-  
+
 vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
 vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
 vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
@@ -38,9 +38,11 @@ require("neo-tree").setup({
 		position = "right",
 		width = 30,
 		mappings = {
+			["<space>"] = false,
 			["o"] = "open",
 			["S"] = "open_split",
 			["s"] = "open_vsplit",
+			["l"] = "clear_filter",
 			["C"] = "close_node",
 			["."] = "set_root",
 			["H"] = "toggle_hidden",

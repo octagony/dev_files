@@ -31,6 +31,10 @@ require("octagony.plugins.dashboard")
 require("octagony.plugins.gitsigns")
 require("octagony.plugins.colorizer")
 require("octagony.plugins.web-devicons")
+require("octagony.plugins.lspkind")
+require("octagony.plugins.neodev")
+
+-- LSP
 require("octagony.plugins.lsp.lspconfig")
 require("octagony.plugins.lsp.cmp")
 require("octagony.plugins.lsp.mason")

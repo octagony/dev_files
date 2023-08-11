@@ -95,5 +95,8 @@ require("lazy").setup({
 	-- Surround
 	{ "tpope/vim-surround" },
 
+	--NeoDev
+	{ "folke/neodev.nvim" },
+
 	-- SETUP END
 })

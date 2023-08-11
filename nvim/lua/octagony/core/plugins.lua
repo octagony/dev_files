@@ -37,6 +37,9 @@ require("lazy").setup({
 	--LSPSaga
 	{ "nvimdev/lspsaga.nvim", event = "LspAttach" },
 
+	-- LSPKind Icons
+	{ "onsails/lspkind.nvim" },
+
 	-- Typescript LSP Features
 	{ "jose-elias-alvarez/typescript.nvim" },
 

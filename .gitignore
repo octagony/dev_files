@@ -14,6 +14,7 @@ lazygit/state.yml
 # NVIM
 nvim/plugin/
 nvim/lazy-lock.json
+nvim/octagony/.luarc.json
 
 # TMUX
 tmux/plugins/

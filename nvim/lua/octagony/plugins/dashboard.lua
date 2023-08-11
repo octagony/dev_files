@@ -1,6 +1,7 @@
 local function default_header()
 	return {
 		"",
+		"",
 		" ██████╗  ██████╗████████╗ █████╗ ",
 		"██╔═══██╗██╔════╝╚══██╔══╝██╔══██╗",
 		"██║   ██║██║        ██║   ███████║",
@@ -13,6 +14,7 @@ local function default_header()
 		" ██║╚██╗██║╚██╗ ██╔╝██║██║╚██╔╝██║",
 		" ██║ ╚████║ ╚████╔╝ ██║██║ ╚═╝ ██║",
 		" ╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝     ╚═╝",
+		"",
 		"",
 	}
 end
@@ -61,6 +63,16 @@ require("dashboard").setup({
 				keymap = "SPC c",
 				key_hl = "Number",
 				action = "cd $HOME/.config/nvim | Telescope find_files",
+			},
+			{
+				icon = "󰰝 ",
+				icon_hl = "Title",
+				desc = "Quit",
+				desc_hl = "String",
+				key = "q",
+				keymap = "SPC q",
+				key_hl = "Number",
+				action = ":q!",
 			},
 		},
 	},

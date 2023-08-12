@@ -1,7 +1,10 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+
 local typescript = require("typescript")
 local lspconfig = require("lspconfig")
+
+-- Lua server
 lspconfig.lua_ls.setup({
 	settings = {
 		Lua = {
@@ -11,16 +14,78 @@ lspconfig.lua_ls.setup({
 		},
 	},
 })
+
+--Astro server
+lspconfig.astro.setup({
+	cmd = { "astro-ls", "--stdio" },
+	filetypes = { "astro" },
+})
+
+--Tailwind server
+lspconfig.tailwindcss.setup({
+	cmd = { "tailwindcss-language-server", "--stdio" },
+	filetypes = {
+		"astro",
+		"astro-markdown",
+		"ejs",
+		"html",
+		"html-eex",
+		"css",
+		"less",
+		"postcss",
+		"sass",
+		"scss",
+		"stylus",
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"vue",
+		"svelte",
+	},
+})
+
+-- TS server
 lspconfig.tsserver.setup({
 	capabilities = capabilities,
 })
-lspconfig.prismals.setup({})
-lspconfig.svelte.setup({})
-lspconfig.volar.setup({})
+
+--Prisma server
+lspconfig.prismals.setup({
+	cmd = { "prisma-languange-server", "--stdio" },
+	filetypes = { "prisma" },
+})
+
+--Svelte server
+lspconfig.svelte.setup({
+	server = {
+		capabilities = capabilities,
+		filetypes = {
+			"svelte",
+		},
+		cmd = { "svelteserver", "--stdio" },
+	},
+})
+
+--Vue server
+lspconfig.volar.setup({
+	filetypes = {
+		"typescript",
+		"javascript",
+		"javascriptreact",
+		"typescriptreact",
+		"vue",
+		"json",
+	},
+	cmd = { "vue-language-server", "--stdio" },
+})
+
+--CSS server
 lspconfig.cssls.setup({
 	capabilities = capabilities,
 })
 
+--Rust server
 lspconfig.rust_analyzer.setup({
 	settings = {
 		["rust-analyzer"] = {
@@ -31,6 +96,22 @@ lspconfig.rust_analyzer.setup({
 				},
 			},
 		},
+	},
+})
+
+--Typescript server
+typescript.setup({
+	server = {
+		capabilities = capabilities,
+		filetypes = {
+			"javascript",
+			"javascriptreact",
+			"javascript.jsx",
+			"typescript",
+			"typescriptreact",
+			"typescript.tsx",
+		},
+		cmd = { "typescript-language-server", "--stdio" },
 	},
 })
 
@@ -54,21 +135,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			vim.lsp.buf.format({ async = true })
 		end, opts)
 	end,
-})
-
-typescript.setup({
-	server = {
-		capabilities = capabilities,
-		filetypes = {
-			"javascript",
-			"javascriptreact",
-			"javascript.jsx",
-			"typescript",
-			"typescriptreact",
-			"typescript.tsx",
-		},
-		cmd = { "typescript-language-server", "--stdio" },
-	},
 })
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }

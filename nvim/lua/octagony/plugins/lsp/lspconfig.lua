@@ -70,12 +70,7 @@ lspconfig.svelte.setup({
 --Vue server
 lspconfig.volar.setup({
 	filetypes = {
-		"typescript",
-		"javascript",
-		"javascriptreact",
-		"typescriptreact",
 		"vue",
-		"json",
 	},
 	cmd = { "vue-language-server", "--stdio" },
 })

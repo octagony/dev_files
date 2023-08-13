@@ -14,6 +14,7 @@ local telescope_actions = require("telescope.actions")
 
 require("telescope").setup({
 	defaults = {
+		file_ignore_patterns = { "node_modules" },
 		path_display = { "truncate" },
 		sorting_strategy = "ascending",
 		layout_config = {

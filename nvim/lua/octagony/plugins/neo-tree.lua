@@ -64,6 +64,9 @@ require("neo-tree").setup({
 		},
 		hijack_netrw_behavior = "open_current",
 		use_libuv_file_watcher = true,
+		follow_current_file = {
+			enabled = true,
+		},
 	},
 	buffers = {
 		show_unloaded = true,

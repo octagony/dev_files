@@ -64,6 +64,9 @@ require("lazy").setup({
 	-- Null-Ls
 	{ "jose-elias-alvarez/null-ls.nvim" },
 
+	--Guard Formatter
+	{ "nvimdev/guard.nvim" },
+
 	-- Autopairs
 	{ "windwp/nvim-autopairs" },
 

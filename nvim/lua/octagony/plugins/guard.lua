@@ -1,7 +1,7 @@
 local ft = require("guard.filetype")
 
 --C Formatter
-ft("c"):fmt("clang-format"):lint("clang-tidy")
+ft("c"):fmt("clang-format")
 --Web formatters
 ft("html,css,typescript,javascript,javascriptreact,typescriptreact,svelte,vue"):fmt("prettierd")
 --Rust formatter

@@ -23,6 +23,26 @@ lspconfig.astro.setup({
 
 --Tailwind server
 lspconfig.tailwindcss.setup({
+	settings = {
+		css = {
+			validate = true,
+			lint = {
+				unknownAtRules = "ignore",
+			},
+		},
+		scss = {
+			validate = true,
+			lint = {
+				unknownAtRules = "ignore",
+			},
+		},
+		less = {
+			validate = true,
+			lint = {
+				unknownAtRules = "ignore",
+			},
+		},
+	},
 	cmd = { "tailwindcss-language-server", "--stdio" },
 	filetypes = {
 		"astro",

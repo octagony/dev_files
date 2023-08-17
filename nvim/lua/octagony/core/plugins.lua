@@ -99,7 +99,10 @@ require("lazy").setup({
 	{ "tpope/vim-surround" },
 
 	--NeoDev
-	{ "folke/neodev.nvim" },
+	{ "folke/neodev.nvim", opts = {} },
+
+	--Leap
+	{ "ggandor/leap.nvim" },
 
 	-- SETUP END
 })

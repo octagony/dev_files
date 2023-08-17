@@ -34,6 +34,7 @@ require("octagony.plugins.web-devicons")
 require("octagony.plugins.lspkind")
 require("octagony.plugins.neodev")
 require("octagony.plugins.guard")
+require("octagony.plugins.leap")
 
 -- LSP
 require("octagony.plugins.lsp.lspconfig")

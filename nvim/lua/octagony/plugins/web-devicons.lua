@@ -55,5 +55,15 @@ require("nvim-web-devicons").setup({
 			color = "#a6e3a1",
 			name = "NodeVersion",
 		},
+		["tailwind.config.js"] = {
+			icon = "󱏿",
+			color = "#89b4fa",
+			name = "TailwindConfig",
+		},
+		["yarn.lock"] = {
+			icon = "",
+			color = "#cba6f7",
+			name = "YarnLock",
+		},
 	},
 })

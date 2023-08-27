@@ -35,6 +35,8 @@ require("octagony.plugins.lspkind")
 require("octagony.plugins.neodev")
 require("octagony.plugins.guard")
 require("octagony.plugins.leap")
+require("octagony.plugins.noice")
+require("octagony.plugins.notify")
 
 -- LSP
 require("octagony.plugins.lsp.lspconfig")

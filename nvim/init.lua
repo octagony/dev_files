@@ -37,6 +37,7 @@ require("octagony.plugins.guard")
 require("octagony.plugins.leap")
 require("octagony.plugins.noice")
 require("octagony.plugins.notify")
+require("octagony.plugins.floating-help")
 
 -- LSP
 require("octagony.plugins.lsp.lspconfig")

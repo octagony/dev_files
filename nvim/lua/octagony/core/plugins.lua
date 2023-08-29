@@ -114,5 +114,8 @@ require("lazy").setup({
 		},
 	},
 
+	--Floating-Help
+	{ "Tyler-Barham/floating-help.nvim" },
+
 	-- SETUP END
 })

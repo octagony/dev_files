@@ -7,7 +7,7 @@ fh.setup({
 	position = "S",
 })
 
-keymap.set("n", "<leader>h", fh.toggle)
+keymap.set("n", "<leader>th", fh.toggle)
 
 local function cmd_abbrev(abbrev, expansion)
 	local cmd = "cabbr "

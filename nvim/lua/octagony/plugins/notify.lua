@@ -13,5 +13,5 @@ require("notify").setup({
 	render = "minimal",
 	stages = "static",
 	timeout = 2000,
-	top_down = true,
+	top_down = false,
 })

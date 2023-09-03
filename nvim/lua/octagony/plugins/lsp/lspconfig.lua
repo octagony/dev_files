@@ -65,6 +65,22 @@ lspconfig.tailwindcss.setup({
 	},
 })
 
+--Typescript server
+typescript.setup({
+	server = {
+		capabilities = capabilities,
+		filetypes = {
+			"javascript",
+			"javascriptreact",
+			"javascript.jsx",
+			"typescript",
+			"typescriptreact",
+			"typescript.tsx",
+		},
+		cmd = { "typescript-language-server", "--stdio" },
+	},
+})
+
 -- TS server
 lspconfig.tsserver.setup({
 	capabilities = capabilities,
@@ -134,26 +150,28 @@ lspconfig.rust_analyzer.setup({
 	},
 })
 
---Typescript server
-typescript.setup({
-	server = {
-		capabilities = capabilities,
-		filetypes = {
-			"javascript",
-			"javascriptreact",
-			"javascript.jsx",
-			"typescript",
-			"typescriptreact",
-			"typescript.tsx",
-		},
-		cmd = { "typescript-language-server", "--stdio" },
-	},
-})
-
 --GraphQL server
 lspconfig.graphql.setup({
 	cmd = { "graphql-lsp", "server", "-m", "stream" },
 	filetypes = { "graphql", "typescriptreact", "javascriptreact" },
+})
+
+--JSON server
+lspconfig.jsonls.setup({
+	capabilities = capabilities,
+})
+
+--YAML server
+lspconfig.yamlls.setup({
+	settings = {
+		yaml = {
+			schemas = {
+				["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
+				["../path/relative/to/file.yml"] = "/.github/workflows/*",
+				["/path/from/root/of/project"] = "/.github/workflows/*",
+			},
+		},
+	},
 })
 
 vim.keymap.set("n", "<leader>lD", vim.diagnostic.open_float)

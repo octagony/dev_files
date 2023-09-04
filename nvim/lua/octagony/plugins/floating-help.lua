@@ -4,7 +4,7 @@ local keymap = vim.keymap
 fh.setup({
 	width = 90,
 	height = 0.7,
-	position = "S",
+	position = "C",
 })
 
 keymap.set("n", "<leader>th", fh.toggle)

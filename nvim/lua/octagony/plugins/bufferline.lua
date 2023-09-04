@@ -1,3 +1,5 @@
+local keymap = vim.keymap
+
 require("bufferline").setup({
 	options = {
 		mode = "tabs",
@@ -28,3 +30,5 @@ require("bufferline").setup({
 		},
 	},
 })
+
+keymap.set("n", "<leader>tp", "<cmd>BufferLinePick<CR>")

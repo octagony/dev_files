@@ -143,7 +143,7 @@ lspconfig.rust_analyzer.setup({
 			diagnostics = {
 				enable = true,
 				experimental = {
-					enable = true,
+					enable = false,
 				},
 			},
 		},
@@ -211,3 +211,5 @@ vim.diagnostic.config({
 		source = "always",
 	},
 })
+
+vim.cmd([[ autocmd BufRead, BufNewFile *.slint set filetype=slint]])

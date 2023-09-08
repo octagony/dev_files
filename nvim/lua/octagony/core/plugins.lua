@@ -101,9 +101,6 @@ require("lazy").setup({
 	--NeoDev
 	{ "folke/neodev.nvim", opts = {} },
 
-	--Leap
-	{ "ggandor/leap.nvim" },
-
 	--Noice
 	{
 		"folke/noice.nvim",
@@ -117,5 +114,10 @@ require("lazy").setup({
 	--Floating-Help
 	{ "Tyler-Barham/floating-help.nvim" },
 
+	--Better Escape
+	{ "max397574/better-escape.nvim" },
+
+	--Template String
+	{ "axelvc/template-string.nvim" },
 	-- SETUP END
 })

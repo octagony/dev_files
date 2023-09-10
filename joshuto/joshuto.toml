@@ -1,0 +1,36 @@
+numbered_command = false
+use_trash = true
+watch_files = true
+xdg_open = false
+xdg_open_fork = false
+
+[display]
+mode = "default"
+automatically_count_files = false
+collapse_preview = true
+column_ratio = [1, 5, 3]
+scroll_offset = 4
+show_borders = true
+show_hidden = true
+show_icons = true
+tilde_in_titlebar = true
+line_number_style = "relative"
+linemode = "none"
+
+[display.sort]
+sort_method = "natural"
+case_sensitive = false
+directories_first = true
+reverse = false
+
+[preview]
+max_preview_size = 4097152                           
+preview_script = "~/.config/joshuto/preview_file.sh" 
+
+[search]
+string_case_sensitivity = "insensitive"
+glob_case_sensitivity = "sensitive"
+fzf_case_sensitivity = "insensitive"
+
+[tab]
+home_page = "home"

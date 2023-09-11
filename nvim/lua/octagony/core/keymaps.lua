@@ -12,7 +12,7 @@ keymap.set("n", "<leader>sa", "gg<S-v>G", opts)
 
 --Save/Quit
 keymap.set("n", "<leader>w", "<cmd>:w<CR>", opts)
-keymap.set("n", "<leader>q", "<cmd>:q<CR>", opts)
+keymap.set("n", "<leader>q", "<cmd>:bdelete<CR>", opts)
 keymap.set("n", "<S-q>", "<cmd>:qa<CR>", opts)
 
 -- No highlights

@@ -119,5 +119,6 @@ require("lazy").setup({
 
 	--Template String
 	{ "axelvc/template-string.nvim" },
+
 	-- SETUP END
 })

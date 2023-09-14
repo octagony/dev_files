@@ -101,16 +101,6 @@ require("lazy").setup({
 	--NeoDev
 	{ "folke/neodev.nvim", opts = {} },
 
-	--Noice
-	{
-		"folke/noice.nvim",
-		event = "VeryLazy",
-		dependencies = {
-			"MunifTanjim/nui.nvim",
-			"rcarriga/nvim-notify",
-		},
-	},
-
 	--Floating-Help
 	{ "Tyler-Barham/floating-help.nvim" },
 

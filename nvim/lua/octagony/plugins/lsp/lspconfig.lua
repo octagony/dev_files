@@ -142,9 +142,6 @@ lspconfig.rust_analyzer.setup({
 		["rust-analyzer"] = {
 			diagnostics = {
 				enable = true,
-				experimental = {
-					enable = false,
-				},
 			},
 		},
 	},

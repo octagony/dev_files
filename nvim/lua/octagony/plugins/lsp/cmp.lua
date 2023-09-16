@@ -83,6 +83,3 @@ cmp.setup.cmdline(":", {
 	mapping = cmp.mapping.preset.cmdline(),
 	sources = cmp.config.sources({ { name = "path" } }, { { name = "cmdline" } }),
 })
-
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-require("lspconfig")["tsserver"].setup({ capabilities = capabilities })

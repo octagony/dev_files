@@ -43,7 +43,7 @@ require("lazy").setup({
 	-- Typescript LSP Features
 	{ "jose-elias-alvarez/typescript.nvim" },
 
-	-- Catppuccinplugins
+	-- Catppuccin Theme
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
 	-- CMP
@@ -68,7 +68,7 @@ require("lazy").setup({
 	{ "nvimdev/guard.nvim" },
 
 	-- Autopairs
-	{ "windwp/nvim-autopairs" },
+	 { "windwp/nvim-autopairs" },
 
 	-- Autotag
 	{ "windwp/nvim-ts-autotag" },

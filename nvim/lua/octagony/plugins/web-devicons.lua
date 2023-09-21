@@ -31,7 +31,7 @@ require("nvim-web-devicons").setup({
 			name = "Out",
 		},
 		["robots.txt"] = {
-			icon = "󰚩",
+			icon = "convert a picture into a terminal icon",
 			COLOR = "#f38ba8",
 			name = "Robots",
 		},
@@ -46,7 +46,7 @@ require("nvim-web-devicons").setup({
 			name = "WebOpenFontFormat",
 		},
 		woff2 = {
-			icon = "",
+			icon = "",
 			color = "#89b4fa",
 			name = "WebOpenFontFormat2",
 		},

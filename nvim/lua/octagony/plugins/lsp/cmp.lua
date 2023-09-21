@@ -26,19 +26,6 @@ cmp.setup({
 			luasnip.lsp_expand(args.body)
 		end,
 	},
-	window = {
-		completion = cmp.config.window.bordered(),
-		documentation = cmp.config.window.bordered(),
-	},
-	formatting = {
-		format = lspkind.cmp_format({
-			maxwidth = 50,
-			before = function(entry, vim_item)
-				vim_item = formatForTailwindCSS(entry, vim_item)
-				return vim_item
-			end,
-		}),
-	},
 	mapping = cmp.mapping.preset.insert({
 		["<C-k>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
 		["<C-j>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
@@ -65,7 +52,22 @@ cmp.setup({
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
 		{ name = "vsnip" },
-	}, { { name = "buffer" }, { name = "nvim_lsp_signature_help" } }),
+		{ name = "buffer" },
+		{ name = "nvim_lsp_signature_help" },
+	}),
+	window = {
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
+	},
+	formatting = {
+		format = lspkind.cmp_format({
+			maxwidth = 50,
+			before = function(entry, vim_item)
+				vim_item = formatForTailwindCSS(entry, vim_item)
+				return vim_item
+			end,
+		}),
+	},
 })
 
 cmp.setup.filetype("gitcommit", {

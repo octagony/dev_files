@@ -53,7 +53,7 @@ require("neo-tree").setup({
 		width = 30,
 		mappings = {
 			["<space>"] = false,
-			["o"] = "open",
+			["o"] = "open_tabnew",
 			["S"] = "open_split",
 			["s"] = "open_vsplit",
 			["l"] = "clear_filter",

@@ -64,10 +64,11 @@ require("lazy").setup({
 	-- Null-Ls
 	{ "jose-elias-alvarez/null-ls.nvim" },
 
-	--Guard Formatter
-	{ "nvimdev/guard.nvim", dependencies = {
-       "nvimdev/guard-collection"
-  } },
+	--Conform Formatter
+	{
+		"stevearc/conform.nvim",
+		opts = {},
+	},
 
 	-- Autopairs
 	{ "windwp/nvim-autopairs" },
@@ -111,6 +112,9 @@ require("lazy").setup({
 
 	--Template String
 	{ "axelvc/template-string.nvim" },
+
+	--Markdown Preview
+	{ "iamcco/markdown-preview.nvim" },
 
 	-- SETUP END
 })

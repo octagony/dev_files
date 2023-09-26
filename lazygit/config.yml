@@ -1,5 +1,5 @@
 gui:
-  windowSize: 'half'
+  windowSize: "half"
   theme:
     activeBorderColor:
       - "#a6e3a1" # Green

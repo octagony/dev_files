@@ -12,14 +12,23 @@ M.general = {
       "<cmd> NvimTreeToggle <CR>",
       "Toggle NvimTree",
     },
+    ["<C-h>"] = { "<cmd> TmuxNavigateLeft <CR>", "Navigate window left" },
+    ["<C-j>"] = { "<cmd> TmuxNavigateDown <CR>", "Navigate window down" },
+    ["<C-k>"] = { "<cmd> TmuxNavigateUp <CR>", "Navigate window up" },
+    ["<C-l>"] = { "<cmd> TmuxNavigateRight <CR>", "Navigate window right" },
   },
 }
 
 M.dap = {
+  plugin = true,
   n = {
     ["<leader>db"] = {
       "<cmd> DapToggleBreakpoint <CR>",
       "Toggle breakpoint",
+    },
+    ["<leader>dr"] = {
+      "<cmd> DapContinue<CR>",
+      "Run or continue the debugger",
     },
     ["<leader>dus"] = {
       function()
@@ -35,10 +44,8 @@ M.dap = {
 M.lsp = {
   n = {
     ["<leader>fm"] = {
-      function()
-        require("conform").format()
-      end,
-      "Format w/ conform",
+      "<cmd> FormatWriteLock <CR>",
+      "Format w/ formatter",
     },
   },
 }

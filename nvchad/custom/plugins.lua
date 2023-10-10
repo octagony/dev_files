@@ -1,4 +1,5 @@
 local plugins = {
+  --Mason
   {
     "williamboman/mason.nvim",
     opts = {
@@ -20,6 +21,8 @@ local plugins = {
       },
     },
   },
+
+  --LSPConfig
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -27,6 +30,8 @@ local plugins = {
       require "custom.configs.lspconfig"
     end,
   },
+
+  --Nvim Linter
   {
     "mfussenegger/nvim-lint",
     event = "VeryLazy",
@@ -34,6 +39,7 @@ local plugins = {
       require "custom.configs.lint"
     end,
   },
+  --Rust Lang
   {
     "rust-lang/rust.vim",
     ft = "rust",
@@ -41,6 +47,8 @@ local plugins = {
       vim.g.rustfmt_autosave = 1
     end,
   },
+
+  --Rust Tools
   {
     "simrat39/rust-tools.nvim",
     ft = "rust",
@@ -52,6 +60,8 @@ local plugins = {
       require("rust-tools").setup(opts)
     end,
   },
+
+  --DAP
   {
     "mfussenegger/nvim-dap",
     config = function()
@@ -59,6 +69,8 @@ local plugins = {
       require("core.utils").load_mappings "dap"
     end,
   },
+
+  --DAP UI
   {
     "rcarriga/nvim-dap-ui",
     event = "VeryLazy",
@@ -78,6 +90,8 @@ local plugins = {
       end
     end,
   },
+
+  --Crates helper for Rust
   {
     "saecki/crates.nvim",
     dependencies = "hrsh7th/nvim-cmp",
@@ -88,6 +102,8 @@ local plugins = {
       crates.show()
     end,
   },
+
+  --CMP
   {
     "hrsh7th/nvim-cmp",
     opts = function()
@@ -96,13 +112,26 @@ local plugins = {
       return M
     end,
   },
+
+  --Conform formatter
   {
-    "mhartington/formatter.nvim",
+    "stevearc/conform.nvim",
     event = "VeryLazy",
     opts = function()
-      return require "custom.configs.formatter"
+      require "custom.configs.conform"
     end,
   },
+
+  -- Vim-Tmux-Navigator
   { "christoomey/vim-tmux-navigator", lazy = false },
+
+  -- Comment
+  {
+    "numToStr/Comment.nvim",
+    opts = function()
+      require "custom.configs.comment"
+    end,
+    lazy = false,
+  },
 }
 return plugins

@@ -44,10 +44,12 @@ M.dap = {
 M.lsp = {
   n = {
     ["<leader>fm"] = {
-      "<cmd> FormatWriteLock <CR>",
-      "Format w/ formatter",
+      function()
+        require("conform").format()
+      end,
+      "Format w/ conform",
     },
-  },
+       },
 }
 
 M.crates = {

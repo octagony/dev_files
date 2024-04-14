@@ -1,44 +1,38 @@
-local builtin = require("telescope.builtin")
-local keymap = vim.keymap
+return {
+  "nvim-telescope/telescope.nvim",
+  branch = "0.1.x",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    {"nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+    "nvim-tree/nvim-web-devicons",
+  },
+  config = function () 
+    local telescope = require("telescope")
+    local actions = require("telescope.actions")
 
-keymap.set("n", "<leader>ff", builtin.find_files, {})
-keymap.set("n", "<leader>fw", builtin.live_grep, {})
-keymap.set("n", "<leader>fb", builtin.buffers, {})
-keymap.set("n", "<leader>fh", builtin.help_tags, {})
-keymap.set("n", "<leader>gb", builtin.git_branches, {})
-keymap.set("n", "<leader>gc", builtin.git_commits, {})
-keymap.set("n", "<leader>gs", builtin.git_status, {})
-keymap.set("n", "<leader>ls", builtin.lsp_document_symbols, {})
-keymap.set("n", "gr", builtin.lsp_references, { noremap = true, silent = true })
-keymap.set("n", "gd", builtin.lsp_definitions, { noremap = true, silent = true })
+    telescope.setup({
+      defaults = {
+        path_display = { "smart" },
+        mappings = {
+          n = {
+            ["q"] = actions.close,
+          },
+          i = {
+            ["<C-k>"] = actions.move_selection_previous,
+            ["<C-j>"] = actions.move_selection_next,
+            ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+          },
+        },
+      },
+    })
 
-local telescope_actions = require("telescope.actions")
+    telescope.load_extension("fzf")
 
-require("telescope").setup({
-	defaults = {
-		file_ignore_patterns = { "node_modules" },
-		path_display = { "truncate" },
-		sorting_strategy = "ascending",
-		layout_config = {
-			horizontal = {
-				prompt_position = "bottom",
-				preview_width = 0.55,
-			},
-			vertical = {
-				mirror = false,
-			},
-			width = 0.87,
-			height = 0.80,
-			preview_cutoff = 120,
-		},
-		mappings = {
-			n = {
-				["q"] = telescope_actions.close,
-			},
-			i = {
-				["<C-k>"] = telescope_actions.move_selection_previous,
-				["<C-j>"] = telescope_actions.move_selection_next,
-			},
-		},
-	},
-})
+    local keymap = vim.keymap
+
+    keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Telescope find files" })
+    keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Telescope find recent files" })
+    keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Telescope find string in cwd" })
+    keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Telescope find string under cursor" }) 
+  end,
+}

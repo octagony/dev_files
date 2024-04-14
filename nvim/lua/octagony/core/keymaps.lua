@@ -1,40 +1,24 @@
--- Core
 vim.g.mapleader = " "
-local opts = { noremap = true, silent = true }
+
 local keymap = vim.keymap
 
--- General
-keymap.set("i", "jk", "<ESC>", opts)
-keymap.set("n", "x", '"_x', opts)
+-- basic navigation
+keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mide with jk" })
+keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights " })
 
--- Select All
-keymap.set("n", "<leader>sa", "gg<S-v>G", opts)
+-- increment/decrement numbers
+keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" })
+keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" })
 
---Save/Quit
-keymap.set("n", "<leader>w", "<cmd>:w<CR>", opts)
-keymap.set("n", "<leader>q", "<cmd>:bdelete<CR>", opts)
-keymap.set("n", "<S-q>", "<cmd>:qa<CR>", opts)
+-- splitting
+keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
+keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
+keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
+keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
 
--- No highlights
-keymap.set("n", "<leader>h", ":nohl<CR>", opts)
-
--- Split window
-keymap.set("n", "<leader>sv", "<C-w>v", opts)
-keymap.set("n", "<leader>sh", "<C-w>s", opts)
-keymap.set("n", "<leader>se", "<C-w>=", opts)
-keymap.set("n", "<leader>sx", ":close<CR>", opts)
-
--- CTRL+{h,j,k,l} for navigation between windows
-keymap.set("", "<C-h>", "<C-w>h", opts)
-keymap.set("", "<C-k>", "<C-w>k", opts)
-keymap.set("", "<C-j>", "<C-w>j", opts)
-keymap.set("", "<C-l>", "<C-w>l", opts)
-
--- Tabs
-keymap.set("n", "<leader>to", ":tabnew<CR>", opts)
-keymap.set("n", "<leader>tx", ":tabclose<CR>", opts)
-keymap.set("n", "<S-l>", ":tabn<CR>", opts)
-keymap.set("n", "<S-h>", ":tabp<CR>", opts)
-
---Neotree toggle
-keymap.set("n", "<leader>e", "<cmd>Neotree toggle<CR>", opts)
+-- tabs
+keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
+keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
+keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
+keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
+keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })

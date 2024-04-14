@@ -1,9 +1,0 @@
-{
-    "workspace.library": [
-        "/home/octagony/.local/share/nvim/lazy/neodev.nvim/types/stable",
-        "/tmp/.mount_nvimuF1TYS/usr/share/nvim/runtime/lua",
-        "/home/octagony/.local/share/nvim/lazy/telescope.nvim/lua",
-        "/home/octagony/.config/nvim/lua",
-        "${3rd}/luv/library"
-    ]
-}

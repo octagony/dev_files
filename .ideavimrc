@@ -1,0 +1,29 @@
+"" REMAP MAPLEADER TO SPACE
+let mapleader=" "
+
+""" Common settings
+set showmode
+set so=5
+set incsearch
+set nu
+set clipboard+=unnamed
+set highlightedyank
+
+""" IDEA SPECIFIC SETTINGS
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+""" BASE MAPPINGS
+imap jk <Esc>
+nmap <ESC> :nohl<CR>
+nmap <leader>sv <Action>(SplitVertically)
+nmap <leader>sh <Action>(SplitHorizontally)
+
+""" TAB MAPPINGS
+nmap <leader>tn <Action>(NextTab)
+nmap <leader>tp <Action>(PreviousTab)
+nmap <leader>x <Action>(CloseEditor)
+
+""" FUZZY FINDER MAPPINGS
+map <Leader>ff <action>(com.mituuz.fuzzier.Fuzzier)

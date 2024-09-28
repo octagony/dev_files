@@ -1,29 +1,219 @@
-"" REMAP MAPLEADER TO SPACE
-let mapleader=" "
+" GLOBAL CONFIG
+" remap redo
+noremap U <C-r>
 
-""" Common settings
-set showmode
-set so=5
-set incsearch
-set nu
-set clipboard+=unnamed
-set highlightedyank
+" map black whole register
+noremap \ "_
 
-""" IDEA SPECIFIC SETTINGS
+" leader key
+let mapleader = ' '
+
+" sync Vim clipboard with OS clipboard
+set clipboard^=unnamed,unnamedplus
+
+" Jump between <>
+set matchpairs+=<:>
+
+" smart line joining
 set ideajoin
-set ideastatusicon=gray
-set idearefactormode=keep
 
-""" BASE MAPPINGS
-imap jk <Esc>
-nmap <ESC> :nohl<CR>
-nmap <leader>sv <Action>(SplitVertically)
-nmap <leader>sh <Action>(SplitHorizontally)
+" open config file
+noremap <leader>cc :edit ~/.ideavimrc<cr>
 
-""" TAB MAPPINGS
-nmap <leader>tn <Action>(NextTab)
-nmap <leader>tp <Action>(PreviousTab)
-nmap <leader>x <Action>(CloseEditor)
+"set source config
+noremap <leader>cs :source ~/.ideavimrc<cr>:nohlsearch<cr>
 
-""" FUZZY FINDER MAPPINGS
-map <Leader>ff <action>(com.mituuz.fuzzier.Fuzzier)
+"highlight search result
+set hlsearch
+
+"remove search highlight
+nnoremap <Esc> :nohlsearch<cr>
+
+"case-insensitive search
+set ignorecase
+
+" search while typing
+
+set incsearch
+
+" move to the beginning of the next word
+map w [w
+
+" move to the end of the next word
+map e ]w
+
+" move to the beginning  of the prev word
+map b [b
+
+" move to the end  of the prev word
+map ge ]b
+
+"exit from insert mode by jk
+imap jk <ESC>
+
+"SPLIT
+" split window vertical
+map <leader>sv <Action>(SplitVertically)
+
+" split window horizontal
+map <leader>sh <Action>(SplitHorizontally)
+
+" unsplit window
+map <leader>ss <Action>(Unsplit)
+
+" unsplit all window
+map <leader>sa <Action>(UnsplitAll)
+
+"move left split
+map <A-h> <C-w>h
+
+"move top split
+map <A-k> <C-w>k
+
+"move bottom split
+map <A-j> <C-w>j
+
+"move right split
+map <A-l> <C-w>l
+
+"TABS
+" next tab
+map <TAB> :tabnext<cr>
+
+" prev tab
+map <S-TAB> :tabprev<cr>
+
+" close tab
+map <leader>x :tabclose<cr>
+
+"SEARCH
+"search by class
+map <leader>fc <Action>(GotoClass)
+
+"search by files
+map <leader>ff <Action>(GotoFile)
+
+"search by symbols
+map <leader>fs <Action>(GotoSymbol)
+
+"search by action
+map <leader>fa <Action>(GotoAction)
+
+"go to declaration
+map <leader>gd <Action>(GotoDeclaration)
+
+"go to type declaration
+map <leader>gy <Action>(GotoTypeDeclaration)
+
+"go to implementation
+map <leader>gi <Action>(GotoImplementation)
+
+"go to test
+map <leader>gt <Action>(GotoTest)
+
+"go to super method
+map <leader>gm <Action>(GotoSuperMethod)
+
+"go to line
+map <leader>gl <Action>(GotoLine)
+
+"find usages
+map <leader>ug <Action>(FindUsages)
+
+"show usages
+map <leader>uu <Action>(ShowUsages)
+
+"show usages
+map <leader>vu <Action>(ViewSource)
+
+"quick implementation
+map <leader>im <Action>(QuickImplementation)
+
+"quick type definition
+map <leader>td <Action>(QuickTypeDefinition)
+
+"expression type info
+map <leader>ti <Action>(ExpressionTypeInfo)
+
+"hover info
+map <leader>sh <Action>(ShowHoverInfo)
+
+"show file structure
+map <leader>oo <Action>(FileStructurePopup)
+
+" FIND
+"find in files
+map <S-f> <Action>(Find)
+
+"find and replace in files
+map <S-r> <Action>(Replace)
+
+"find and replace in files globally
+map <S-h> <Action>(FindInPath)
+
+"find and replace in path
+map <S-p> <Action>(ReplaceInPath)
+
+" RENAME
+" rename element
+map <leader>rn <Action>(RenameElement)
+
+" extract method
+map <leader>rm <Action>(ExtractMethod)
+
+" variable
+map <leader>rv <Action>(IntroduceVariable)
+
+" field
+map <leader>rf <Action>(IntroduceField)
+
+" signature
+map <leader>rs <Action>(ChangeSignature)
+
+" quick list popup
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+
+" ACTIONS
+" show actions
+map <leader>aa <Action>(ShowIntentionActions)
+
+" surround with
+map <leader>sw <Action>(SurroundWith)
+
+" generate helper
+map <S-space> <Action>(Generate)
+
+" duplicate line
+map <S-k> <Action>(EditorDuplicateLines)
+
+" complete statement helper
+map <C-[> <Action>(EditorCompleteStatement)
+
+" move to next error
+map ]d <Action>(GotoNextError)
+
+" move to prev error
+map [d <Action>(GotoPreviousError)
+
+" recent files
+map <C-;> <Action>(RecentFiles)
+
+" CODE ACTIONS
+" format code
+map <leader>np <Action>(ReformatCode)
+
+" optimize imports
+map <leader>oi <Action>(OptimizeImports)
+
+" move line up
+map <C-k> <Action>(MoveLineUp)
+
+" move line down
+map <C-j> <Action>(MoveLineDown)
+
+" move block up
+map <C-i> <Action>(MoveStatementDown)
+
+" move block up
+map <C-o> <Action>(MoveStatementUp)
+

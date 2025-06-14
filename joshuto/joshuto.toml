@@ -15,7 +15,6 @@ show_hidden = true
 show_icons = true
 tilde_in_titlebar = true
 line_number_style = "relative"
-linemode = "none"
 
 [display.sort]
 sort_method = "natural"

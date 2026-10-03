@@ -26,8 +26,8 @@ video_default = [
 ]
 
 text_default = [
-  { command = "nvim" },
-  { command = "codium" },
+  { command = "zed" },
+  { command = "vscode" },
   { command = "bat", args = [
     "--paging=always",
   ] },

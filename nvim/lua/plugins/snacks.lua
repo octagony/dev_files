@@ -23,6 +23,18 @@ return {
           { icon = " ", key = "q", desc = "Quit", action = ":qa" },
         },
       },
+      picker = {
+        sources = {
+          files = {
+            hidden = true,
+            ignored = true,
+          },
+          grep = {
+            hidden = true,
+            ignored = false,
+          },
+        },
+      },
     },
   },
 }
